@@ -1,8 +1,10 @@
 import { createStore, combineReducers } from "redux";
 import gifReducer from "./reducers/gifReducer";
+import allPostsReducer from "./reducers/allPostsReducer";
 
 const root = combineReducers({
   gifReducer,
+  allPostsReducer,
 });
 const store = createStore(
   root,
