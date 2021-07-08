@@ -33,13 +33,14 @@ const Message = () => {
     await axios
       .get(`https://api.giphy.com/v1/gifs/${searchTerm}`, {
         params: {
-          limit: 10,
+          limit: 5,
           api_key: KEY,
         },
         headers,
       })
       .then((response) => {
         dispatch({ type: "RESULTS", payload: response.data.data });
+        console.log(response.data.data);
       });
   };
 
@@ -62,7 +63,7 @@ const Message = () => {
   const addImage = (e) => {
     tog ? setTog(false) : setTog(true);
     const clickedGif = results.filter((id) => id.id === e.target.classList[0]);
-    setInsetGifUrl(clickedGif[0].images.original.url);
+    setInsetGifUrl(clickedGif[0].images.original.webp);
   };
 
   // the text field to write something to post is storing in a state hook
@@ -110,7 +111,7 @@ const Message = () => {
         <div className='m-1'>
           <img
             onClick={addImage}
-            src={el.images.downsized.url}
+            src={el.images.fixed_width_downsampled.webp}
             alt={el.id}
             className={`${el.id} w-80 h-80 `}
             type='image'
