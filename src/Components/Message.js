@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 
-const KEY = "IH3SKtYJbMZp4IQ2N1tEZMbvBcVAyVDf";
+const KEY = process.env.REACT_APP_GIPHY_KEY;
 
 const Message = () => {
   // for redux reducers to send data
