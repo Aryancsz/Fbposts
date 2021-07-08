@@ -171,7 +171,7 @@ const Message = () => {
               1min ago • <i className='fas fa-cog text-gray-500 ml-1'></i>
             </div>
           </div>
-          <div className='ml-20 mb-3'>{el.postTextValue}</div>
+          <div className='ml-16 mb-3'>{el.postTextValue}</div>
           <div className='flex items-center justify-center'>
             <div className='px-2 bg-black w-1/2'>
               {el.insetGifUrl ? (
