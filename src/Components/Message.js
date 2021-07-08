@@ -30,7 +30,7 @@ const Message = () => {
     await axios
       .get(`https://api.giphy.com/v1/gifs/${searchTerm}`, {
         params: {
-          limit: 5,
+          limit: 10,
           api_key: KEY,
         },
         headers,
