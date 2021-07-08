@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+// Axios is same as fetch with better implementation and simple to use.
 import axios from "axios";
 
+//api key for giphy | can be masked using .env if security is priority.
 const KEY = "IH3SKtYJbMZp4IQ2N1tEZMbvBcVAyVDf";
 
 const Message = () => {
